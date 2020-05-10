@@ -8,6 +8,8 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 import { ProductCheckoutComponent } from './product-checkout/product-checkout.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { CartService } from './cart.service';
 
 @NgModule({
   imports: [
@@ -15,6 +17,7 @@ import { ProductCheckoutComponent } from './product-checkout/product-checkout.co
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
+      { path: 'products/:productId', component: ProductDetailsComponent },
     ])
   ],
   declarations: [
@@ -22,9 +25,11 @@ import { ProductCheckoutComponent } from './product-checkout/product-checkout.co
     TopBarComponent,
     ProductListComponent,
     ProductAlertsComponent,
-    ProductCheckoutComponent
+    ProductCheckoutComponent,
+    ProductDetailsComponent
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
+  providers: [CartService]
 })
 export class AppModule { }
 

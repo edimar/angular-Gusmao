@@ -10,9 +10,9 @@ export const products = [
     description: 'Plano avançado da plataforma de robôs..'
   },
   {
-    name: 'Plano',
+    name: 'Plano Omega',
     price: 99.9,
-    description: ''
+    description: 'ESta plano é o Foda...'
   }
 ];
 
